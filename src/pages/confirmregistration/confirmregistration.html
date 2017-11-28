@@ -1,0 +1,56 @@
+
+<ion-header>
+  <!-- use ion-toolbar for a normal toolbar and ion-navbar for navigation -->
+  <ion-toolbar>
+    <ion-buttons left>
+      <!-- left aligned content here -->
+      <ion-icon class="ion-icon" name="md-arrow-back" color="light"></ion-icon>
+    </ion-buttons>
+
+    <ion-title>
+      Confirm Account
+    </ion-title>
+
+    <ion-buttons right>
+      <!-- left aligned content here -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- Controls -->
+<ion-content>
+  <ion-list>
+      <ion-item>
+        <p style="text-align:center">
+          A varyfication code has been sent to the email id. Please enter code here to confirm your user registration. If you not get varification code. Click on Resend Code Button.</p>
+      </ion-item>
+    <ion-item>
+        <ion-label floating>Confirmation Code</ion-label>
+        <ion-input [(ngModel)]="confirmationCode" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <button ion-button block large color="button-color"  (click)="onConfirmRegistration()">Confirm</button>
+    </ion-item>
+
+  </ion-list>
+
+
+  <!-- Showing Three option for resend/login/signup page -->
+  <ion-grid>
+    <ion-row>
+      <ion-col width-30>
+        <button ion-button color="primary" small (click)="navToResendCode()">Resend Code</button>
+      </ion-col>
+      <ion-col width-30>
+        <button ion-button color="dark" small (click)="navToRegister()">Registration</button>
+      </ion-col>
+      <ion-col width-30>
+        <button ion-button color="danger" small (click)="navToLogin()">Login</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+

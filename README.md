@@ -1,1 +1,1 @@
-# NewIonic
+# IONIC2
